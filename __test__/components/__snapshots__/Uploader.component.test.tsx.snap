@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in Uploader.component.tsx <UploaderComponent/> To do match in the snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <h2>
+      Upload your image
+    </h2>
+    <p>
+      File should be Jpeg, Png,...
+    </p>
+    <div
+      class="dropzone"
+      role="presentation"
+      tabindex="0"
+    >
+      <input
+        data-testid="drop-input"
+        multiple=""
+        style="display: none;"
+        tabindex="-1"
+        type="file"
+      />
+      <img
+        alt="upload-image"
+        data-nimg="1"
+        decoding="async"
+        height="40"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+        style="color: transparent;"
+        width="40"
+      />
+      <p>
+        Drag & Drop your image here
+      </p>
+    </div>
+    <p>
+      Or
+    </p>
+    <button>
+      Choose a file
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Test in component <Loading /> should to do match in the snapshot 1`] = `
+<div>
+  <h3
+    style="align-self: flex-start;"
+  >
+    Uploading...
+  </h3>
+  <span
+    class="loader"
+  />
+</div>
+`;
+
+exports[`Test in component <Upload /> should to do match in the snapshot 1`] = `
+<div>
+  <h2>
+    Upload your image
+  </h2>
+  <p>
+    File should be Jpeg, Png,...
+  </p>
+  <div
+    class="dropzone"
+    role="presentation"
+    tabindex="0"
+  >
+    <input
+      data-testid="drop-input"
+      multiple=""
+      style="display: none;"
+      tabindex="-1"
+      type="file"
+    />
+    <img
+      alt="upload-image"
+      data-nimg="1"
+      decoding="async"
+      height="40"
+      loading="lazy"
+      src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+      srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+      style="color: transparent;"
+      width="40"
+    />
+    <p>
+      Drag & Drop your image here
+    </p>
+  </div>
+  <p>
+    Or
+  </p>
+  <button>
+    Choose a file
+  </button>
+</div>
+`;
+
+exports[`Test in component <Uploaded /> should to do match in the snapshot 1`] = `
+<div>
+  <span
+    class="material-symbols-outlined icon"
+  >
+    check_circle
+  </span>
+  <h2>
+    Uploaded Successfully!
+  </h2>
+  <img
+    alt="image-uploaded"
+    class="image"
+    src="https://images.unsplash.com/photo-1678737169727-a3236885e763?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=846&q=80"
+  />
+  <div
+    class="text"
+  >
+    <p>
+      https://images.unsplash.com/photo-1678737169727-a3236885e763?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=846&q=80
+    </p>
+    <button
+      class="copy"
+    >
+      Copy Link
+    </button>
+  </div>
+</div>
+`;

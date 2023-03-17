@@ -7,7 +7,7 @@ const validTypes = [
   'image/svg+xml',
 ];
 
-export const validFile = (file: File): boolean | Error => {
+export const validFile = (file: File): boolean => {
   if (file.name.length > maxNameLength) {
     throw new Error('Name too large');
   }

@@ -36,11 +36,16 @@ const UploaderComponent = () => {
 interface UploadProps {
   uploadFile: (file: File) => void;
 }
-const Upload: FC<UploadProps> = ({ uploadFile }) => {
+export const Upload: FC<UploadProps> = ({ uploadFile }) => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
-    if (!validFile(acceptedFiles[0])) return;
-    uploadFile(acceptedFiles[0]);
+    try {
+      validFile(acceptedFiles[0]);
+      uploadFile(acceptedFiles[0]);
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
+
   const { getRootProps, getInputProps, isDragActive, open } = useDropzone({ onDrop });
 
   return (
@@ -48,8 +53,11 @@ const Upload: FC<UploadProps> = ({ uploadFile }) => {
       <h2>Upload your image</h2>
       <p>File should be Jpeg, Png,...</p>
 
-      <div className={styles.dropzone} {...getRootProps()}>
-        <input {...getInputProps()} />
+      <div
+        className={styles.dropzone}
+        {...getRootProps()}
+      >
+        <input data-testid="drop-input" {...getInputProps()} />
         {isDragActive ? (<>
           <Image
             width="115"
@@ -73,7 +81,7 @@ const Upload: FC<UploadProps> = ({ uploadFile }) => {
   )
 }
 
-const Loading = () => (
+export const Loading = () => (
   <>
     <h3 style={{ alignSelf: 'flex-start' }}>
       Uploading...
@@ -85,7 +93,7 @@ const Loading = () => (
 interface UploadedProps {
   imageUrl: string;
 }
-const Uploaded: FC<UploadedProps> = ({ imageUrl }) => {
+export const Uploaded: FC<UploadedProps> = ({ imageUrl }) => {
   const handleCopyUrl = () => navigator.clipboard.writeText(imageUrl);
 
   return (
@@ -100,7 +108,7 @@ const Uploaded: FC<UploadedProps> = ({ imageUrl }) => {
         alt="image-uploaded"
       />
       <div className={styles.text}>
-        {imageUrl}
+        <p>{imageUrl}</p>
         <button
           className={styles.copy}
           onClick={handleCopyUrl}

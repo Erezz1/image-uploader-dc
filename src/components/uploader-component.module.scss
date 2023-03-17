@@ -85,6 +85,11 @@
     background: #F6F8FB;
     border: 1px solid #E0E0E0;
     border-radius: 8px;
+
+    p {
+      margin: 0;
+      overflow: hidden;
+    }
   }
 
   .copy {
