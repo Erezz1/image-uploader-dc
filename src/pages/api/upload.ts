@@ -11,7 +11,7 @@ cloudinary.config(process.env.CLOUDINARY_URL!);
 // Multer middleware
 const upload = multer({
   storage: multer.diskStorage({
-    destination: './tmp/uploads',
+    destination: '/tmp',
     filename: (req, file, cb) => cb(null, file.originalname)
   }),
 });
